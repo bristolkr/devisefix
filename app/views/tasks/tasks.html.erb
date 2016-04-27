@@ -1,0 +1,7 @@
+<% if admin_signed_in? %>
+  SUCCESS!!
+  <%= link_to "Sign Out", destroy_admin_session_path, :method => :delete %>
+<% else %>
+  DELETED!!
+  <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<% end %>

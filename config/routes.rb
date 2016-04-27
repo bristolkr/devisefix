@@ -66,4 +66,5 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
         sessions: 'users/sessions'
       }
+      get 'users/:id/tasks', to: 'tasks#show', as: :user_root
 end
